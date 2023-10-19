@@ -17,6 +17,6 @@ import Foundation
         let formattedDate = dateFormatter.string(from: currentDate)
         let concatenatedString = "\(value) \(formattedDate)"
         
-        return value
+        return concatenatedString
     }
 }
