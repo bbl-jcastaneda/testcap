@@ -1,10 +1,9 @@
-#import <UIKit/UIKit.h>
+// MyPlugin.h
+#import <Foundation/Foundation.h>
+#import <Capacitor/Capacitor.h>
 
-//! Project version number for Plugin.
-FOUNDATION_EXPORT double PluginVersionNumber;
+@interface TestCapPlugin : CAPPlugin
 
-//! Project version string for Plugin.
-FOUNDATION_EXPORT const unsigned char PluginVersionString[];
+- (void)echo:(CAPPluginCall *)call;
 
-// In this header, you should import all the public headers of your framework using statements like #import <Plugin/PublicHeader.h>
-
+@end
