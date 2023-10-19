@@ -7,9 +7,9 @@ export class TestCapWeb extends WebPlugin implements TestCapPlugin {
     console.log('ECHO', options);
     return options;
   }
-  async concatenateDate(options: { value: string }): Promise<{ value: string }> {
+  async concatenateDate(options: { text: string }): Promise<{ text: string }> {
     console.log('CONCATENATE DATE', options);
-    options.value += + new Date().toDateString()
+    options.text += + new Date().toDateString()
     return options;
   }
 }
