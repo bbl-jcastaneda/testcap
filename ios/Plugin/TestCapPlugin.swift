@@ -15,4 +15,12 @@ public class TestCapPlugin: CAPPlugin {
             "value": implementation.echo(value)
         ])
     }
+    
+    @objc func concatenateDate(_ call: CAPPluginCall) {
+        let value = call.getString("value") ?? ""
+        call.resolve([
+            "value": implementation.concatenateDate(value)
+        ])
+    }
+    
 }
