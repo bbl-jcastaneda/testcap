@@ -17,7 +17,7 @@ public class TestCapPlugin: CAPPlugin {
     }
     
     @objc func concatenateDate(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
+        let value = call.getString("text") ?? ""
         call.resolve([
             "value": implementation.concatenateDate(value)
         ])
