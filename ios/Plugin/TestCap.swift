@@ -19,4 +19,11 @@ import Foundation
         
         return concatenatedString
     }
+    
+    @objc public func reverseString(_ value: String) -> String {
+        print(value)
+        let reversedCharacters = value.reversed()
+        let reversedString = String(reversedCharacters)
+        return reversedString
+    }
 }

@@ -19,7 +19,14 @@ public class TestCapPlugin: CAPPlugin {
     @objc func concatenateDate(_ call: CAPPluginCall) {
         let value = call.getString("text") ?? ""
         call.resolve([
-            "text": implementation.concatenateDate(value)
+            "text": implementation.concatenateDate(value),
+            "reversedString": implementation.reverseString(value)
+        ])
+    }
+    @objc func reverseString(_ call: CAPPluginCall) {
+        let value = call.getString("text") ?? ""
+        call.resolve([
+            "text": implementation.reverseString(value)
         ])
     }
     
